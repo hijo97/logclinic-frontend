@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Clinic - Controle de Estoque</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="sistema-completo">
+    <header class="navbar">
+        <div class="logo"><img src="assets/imagens/LOGO.png" alt="Log Clinic"></div>
+        <div class="usuario">Olá, <span id="nome-usuario-logado">Admin</span> | <a href="login.html" id="btn-sair" style="color: #94a3b8; text-decoration: none; margin-left: 5px;"><i class="fa-solid fa-power-off"></i> Sair</a></div> 
+    </header>
+
+    <div class="container-principal">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="pacientes.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+                    <li><a href="agenda.html"><i class="fa-solid fa-calendar-days"></i> Agenda</a></li>
+                    <li><a href="ledger.html"><i class="fa-solid fa-book-medical"></i> Ledger</a></li>
+                    <li><a href="financeiro.html"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+                    <li><a href="estoque.html" class="active-link"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                    <li><a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <main class="conteudo-central">
+            <section id="tela-estoque" class="secao-conteudo">
+                <div class="titulo-secao">
+                    <h2>Controle de Estoque</h2>
+                    <p>Gerencie o nível de materiais e insumos médicos utilizados nos procedimentos.</p>
+                </div>
+                <div class="barra-acoes">
+                    <div class="campo-busca">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="busca-estoque" placeholder="Buscar insumo...">
+                    </div>
+                    <button class="btn-primario"><i class="fa-solid fa-plus"></i> Novo Item</button>
+                </div>
+                <div class="container-tabela">
+                    <table class="tabela-sistema">
+                        <thead>
+                            <tr>
+                                <th>Item / Insumo</th>
+                                <th>Categoria</th>
+                                <th style="width: 120px;">Qtd. Atual</th>
+                                <th style="width: 120px;">Qtd. Mínima</th>
+                                <th style="width: 100px; text-align: right;">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Seringa Descartável 5ml</strong></td>
+                                <td>Descartáveis</td>
+                                <td>50</td>
+                                <td>10</td>
+                                <td style="text-align: right;">
+                                    <button class="btn-mini-acao"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn-mini-acao btn-mini-excluir"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

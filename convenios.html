@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Clinic - Configurações :: Cadastrar Convênio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="sistema-completo">
+
+    <header class="navbar">
+        <div class="logo"><img src="assets/imagens/LOGO.png" alt="Log Clinic"></div>
+        <div class="usuario">
+            Olá, <span id="nome-usuario-logado">Admin</span> | 
+            <a href="login.html" id="btn-sair" style="color: #94a3b8; text-decoration: none; margin-left: 5px;">
+                <i class="fa-solid fa-power-off"></i> Sair
+            </a>
+        </div> 
+    </header>
+
+    <div class="container-principal">
+        
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="pacientes.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+                    <li><a href="agenda.html"><i class="fa-solid fa-calendar-days"></i> Agenda</a></li>
+                    <li><a href="ledger.html"><i class="fa-solid fa-book-medical"></i> Ledger</a></li>
+                    <li><a href="financeiro.html"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                    <li><a href="configuracoes.html" class="active-link"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <main class="conteudo-central">
+            
+            <section id="tela-cadastro-convenio" class="secao-conteudo">
+                <div class="titulo-secao">
+                    <h2>Cadastrar Novo Convênio</h2>
+                    <p>Insira os dados do convênio parceiro para habilitá-lo no sistema da clínica.</p>
+                </div>
+
+                <form id="form-cadastro-convenio" class="formulario-sistema">
+                    
+                    <div class="grupo-campos">
+                        <div class="campo-form largura-100">
+                            <label for="con-nome">Nome do Convênio *</label>
+                            <input type="text" id="con-nome" name="nome" required placeholder="Ex: Unimed Prime, Amil Coletivo">
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos" style="margin-top: 20px;">
+                        <div class="campo-form largura-100">
+                            <label for="con-cobertura">Tipo de Cobertura *</label>
+                            <input type="text" id="con-cobertura" name="cobertura" required placeholder="Ex: Nacional Completa, Regional Ambulatorial">
+                        </div>
+                    </div>
+
+                    <div class="botoes-formulario" style="margin-top: 35px;">
+                        <button type="button" class="btn-secundario" onclick="location.href='index.html'">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn-primario">
+                            <i class="fa-solid fa-floppy-disk"></i> Salvar Convênio
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cadastrar-convenio.js"></script>
+</body>
+</html>

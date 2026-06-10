@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Clinic - Configurações</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="sistema-completo">
+
+    <header class="navbar">
+        <div class="logo"><img src="assets/imagens/LOGO.png" alt="Log Clinic"></div>
+        <div class="usuario">
+            Olá, <span id="nome-usuario-logado">Admin</span> | 
+            <a href="login.html" id="btn-sair" style="color: #94a3b8; text-decoration: none; margin-left: 5px;">
+                <i class="fa-solid fa-power-off"></i> Sair
+            </a>
+        </div> 
+    </header>
+
+    <div class="container-principal">
+        
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" ><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="pacientes.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+                    <li><a href="agenda.html" ><i class="fa-solid fa-calendar-days"></i> Agenda</a></li>
+                    <li><a href="ledger.html"><i class="fa-solid fa-book-medical"></i> Ledger</a></li>
+                    <li><a href="financeiro.html"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                    <li><a href="configuracoes.html" class="active-link"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="conteudo-central">
+            
+            <section id="tela-configuracoes" class="secao-conteudo">
+                <div class="titulo-secao">
+                    <h2>Configurações</h2>
+                    <p>Bem-vindo! Escolha uma das opções.</p>
+                </div>
+
+                <div class="cards-resumo">
+                    
+                        <div class="card-dados">
+                            <button type="submit" class="btn-primario-config" onclick="location.href='usuario.html'">
+                            <i></i> Gerenciamento de Usuário
+                        </button>
+                        </div>
+                    
+
+                   
+                        <div class="card-dados">
+                            <button type="submit" class="btn-primario-config" onclick="location.href='cadastro-medico.html'">
+                            <i></i> Gerenciamento de Médicos
+                        </button>
+                        </div>
+                    
+
+                     
+                        <div class="card-dados">
+                            <button type="submit" class="btn-primario-config" onclick="location.href='convenios.html'">
+                            <i></i> Gerenciamento de Convênios
+                        </button>
+                        </div>
+                   
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+</div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Clinic - Agenda :: Agendar Consulta</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="sistema-completo">
+
+    <header class="navbar">
+        <div class="logo"><img src="assets/imagens/LOGO.png" alt="Log Clinic"></div>
+        <div class="usuario">
+            Olá, <span id="nome-usuario-logado">Admin</span> | 
+            <a href="login.html" id="btn-sair" style="color: #94a3b8; text-decoration: none; margin-left: 5px;">
+                <i class="fa-solid fa-power-off"></i> Sair
+            </a>
+        </div> 
+    </header>
+
+    <div class="container-principal">
+        
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" ><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="pacientes.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+                    <li><a href="agenda.html" class="active-link"><i class="fa-solid fa-calendar-days"></i> Agenda</a></li>
+                    <li><a href="ledger.html"><i class="fa-solid fa-book-medical"></i> Ledger</a></li>
+                    <li><a href="financeiro.html"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                    <li><a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="conteudo-central">
+            
+            <section id="tela-cadastro-agendamento" class="secao-conteudo">
+                <div class="titulo-secao">
+                    <h2>Agendar Nova Consulta</h2>
+                    <p>Selecione o paciente, o procedimento técnico e defina o horário para confirmar o compromisso.</p>
+                </div>
+
+                <form id="form-cadastro-agendamento" class="formulario-sistema">
+                    
+                    <div class="grupo-campos">
+                        <div class="campo-form largura-70">
+                            <label for="agen-paciente">Paciente *</label>
+                            <select id="agen-paciente" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #ffffff;">
+                                <option value="">Selecione um paciente cadastrado...</option>
+                                </select>
+                        </div>
+                        <div class="campo-form largura-30">
+                            <label for="agen-data">Data da Consulta *</label>
+                            <input type="date" id="agen-data" required class="input-padrao" onclick="this.showPicker()">
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos" style="margin-top: 20px;">
+                        <div class="campo-form largura-30">
+                            <label for="agen-horario">Horário *</label>
+                            <select id="agen-horario" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #ffffff;">
+                                <option value="">Selecione...</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="agen-servico">Serviço / Procedimento *</label>
+                            <select id="agen-servico" required>
+                                <option value="">Carregando serviços...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="botoes-formulario" style="margin-top: 35px;">
+                        <button type="button" class="btn-secundario" onclick="location.href='agenda.html'">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn-primario">
+                            <i class="fa-solid fa-calendar-check"></i> Confirmar Agendamento
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cadastro-agenda.js"></script>
+    <script src="js/lista-servico.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Clinic - Cadastrar Paciente</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="sistema-completo">
+
+    <header class="navbar">
+        <div class="logo"><img src="assets/imagens/LOGO.png" alt="Log Clinic"></div>
+        <div class="usuario">
+            Olá, <span id="nome-usuario-logado">Admin</span> | 
+            <a href="login.html" id="btn-sair" style="color: #94a3b8; text-decoration: none; margin-left: 5px;">
+                <i class="fa-solid fa-power-off"></i> Sair
+            </a>
+        </div> 
+    </header>
+
+    <div class="container-principal">
+        
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" ><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="pacientes.html" class="active-link"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+                    <li><a href="agenda.html" ><i class="fa-solid fa-calendar-days"></i> Agenda</a></li>
+                    <li><a href="ledger.html"><i class="fa-solid fa-book-medical"></i> Ledger</a></li>
+                    <li><a href="financeiro.html"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                    <li><a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="conteudo-central">
+            
+            <section id="tela-cadastro-paciente" class="secao-conteudo">
+                <div class="titulo-secao">
+                    <h2>Cadastrar Novo Paciente</h2>
+                    <p>Preencha os dados abaixo de acordo com as especificações do registro clínico.</p>
+                </div>
+
+                <form id="form-cadastro-paciente" class="formulario-sistema">
+                    
+                    <div class="grupo-campos">
+                        <div class="campo-form largura-70">
+                            <label for="cad-nome">Nome Completo *</label>
+                            <input type="text" id="cad-nome" name="nome" required placeholder="Ex: João da Silva">
+                        </div>
+                        <div class="campo-form largura-30">
+                            <label for="cad-data-nascimento">Data de Nascimento *</label>
+                            <input type="date" id="cad-data-nascimento" name="dataNascimento" required>
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos" style="margin-top: 15px;">
+                        <div class="campo-form">
+                            <label for="cad-cpf">CPF *</label>
+                            <input type="text" id="cad-cpf" name="cpf" required placeholder="000.000.000-00" maxlength="14">
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="cad-genero">Gênero</label>
+                            <select id="cad-genero" name="genero">
+                                <option value="">Selecione...</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                                <option value="O">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos" style="margin-top: 15px;">
+                        <div class="campo-form largura-50">
+                            <label for="cad-telefone">Telefone/WhatsApp *</label>
+                            <input type="tel" id="cad-telefone" name="telefone" required placeholder="(11) 99999-0000" maxlength="15">
+                        </div>
+
+                        <div class="campo-form largura-50">
+                            <label for="cad-email">E-mail</label>
+                            <input type="email" id="cad-email" name="email" placeholder="nome@email.com">
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos" style="margin-top: 15px;">
+                        <div class="campo-form largura-50">
+                            <label for="cad-telefone">Empresa</label>
+                            <input type="text" id="cad-empresa" name="empresa" required placeholder="Nome da empresa onde trabalha">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="cad-convenio">Convênio Médico:</label>
+                                <select id="cad-convenio" required>
+                                 <option value="">Carregando convênios...</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="grupo-campos" style="margin-top: 15px;">
+                        <div class="campo-form largura-20">
+                            <label for="cad-cep">CEP</label>
+                            <input type="text" id="cad-cep" name="cep" placeholder="00000-000" maxlength="9">
+                        </div>
+                        <div class="campo-form largura-60">
+                            <label for="cad-rua">Logradouro *</label>
+                            <input type="text" id="cad-logradouro" name="logradouro" required placeholder="Ex: Avenida Paulista">
+                        </div>
+                        <div class="campo-form largura-20">
+                            <label for="cad-numero">Número *</label>
+                            <input type="text" id="cad-numero" name="numero" required placeholder="1234" maxlength="10">
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos" style="margin-top: 15px;">
+                        <div class="campo-form largura-50">
+                            <label for="cad-bairro">Bairro *</label>
+                            <input type="text" id="cad-bairro" name="bairro" required placeholder="Bairro">
+                        </div>
+                        
+                        <div class="campo-form largura-50">
+                            <label for="cad-complemento">Complemento</label>
+                            <input type="text" id="cad-complemento" name="complemento" placeholder="Apto, Bloco, etc.">  
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos" style="margin-top: 15px;">
+                        <div class="campo-form largura-50">
+                            <label for="cad-cidade">Cidade *</label>
+                            <input type="text" id="cad-cidade" name="cidade" required placeholder="Cidade">
+                        </div>
+                        <div class="campo-form largura-40">
+                            <label for="cad-estado">Estado *</label>
+                            <input type="text" id="cad-estado" name="estado" required placeholder="Estado">
+                        </div>
+                        <div class="campo-form largura-10">
+                            <label for="cad-uf">UF *</label>
+                            <input type="text" id="cad-uf" name="uf" required placeholder="SP" maxlength="2" style="text-transform: uppercase;">
+                        </div>
+                    </div>
+
+                    <div class="botoes-formulario" style="margin-top: 35px;">
+                        <button type="button" class="btn-secundario" onclick="location.href='pacientes.html'">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn-primario"><i class="fa-solid fa-floppy-disk"></i> Salvar Paciente</button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cadastro-paciente.js"></script>
+
+</body>
+</html>

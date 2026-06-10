@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Clinic - Relatórios Gerenciais</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="sistema-completo">
+
+    <header class="navbar">
+        <div class="logo"><img src="assets/imagens/LOGO.png" alt="Log Clinic"></div>
+        <div class="usuario">
+            Olá, <span id="nome-usuario-logado">Admin</span> | 
+            <a href="login.html" id="btn-sair" style="color: #94a3b8; text-decoration: none; margin-left: 5px;">
+                <i class="fa-solid fa-power-off"></i> Sair
+            </a>
+        </div> 
+    </header>
+
+    <div class="container-principal">
+        
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="pacientes.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+                    <li><a href="agenda.html"><i class="fa-solid fa-calendar-days"></i> Agenda</a></li>
+                    <li><a href="ledger.html"><i class="fa-solid fa-book-medical"></i> Ledger</a></li>
+                    <li><a href="financeiro.html"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a></li>
+                    <li><a href="relatorios.html" class="active-link"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                    <li><a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <main class="conteudo-central">
+            
+            <section id="tela-relatorios" class="secao-conteudo">
+                <div class="titulo-secao">
+                    <h2>Relatórios Gerenciais</h2>
+                    <p>Consulte e exporte estatísticas de faturamento, produtividade e atendimentos da clínica.</p>
+                </div>
+
+                <div class="cards-resumo">
+                    
+                    <div class="card-indicador" style="cursor: pointer; transition: transform 0.2s;" onclick="alert('Gerando relatório de consultas...')">
+                        <div class="card-icone" style="background-color: #f3e8ff; color: #6b21a8;">
+                            <i class="fa-solid fa-file-chart-column"></i>
+                        </div>
+                        <div class="card-dados">
+                            <span class="card-qtd" style="font-size: 1.3rem;">Exportar PDF</span>
+                            <span class="card-label">Consultas por Período</span>
+                        </div>
+                    </div>
+
+                    <div class="card-indicador" style="cursor: pointer; transition: transform 0.2s;" onclick="alert('Gerando faturamento por convênio...')">
+                        <div class="card-icone" style="background-color: #e0f2fe; color: #0369a1;">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <div class="card-dados">
+                            <span class="card-qtd" style="font-size: 1.3rem;">Gerar Relatório</span>
+                            <span class="card-label">Faturamento por Convênio</span>
+                        </div>
+                    </div>
+
+                    <div class="card-indicador" style="cursor: pointer; transition: transform 0.2s;" onclick="alert('Analisando histórico de evoluções...')">
+                        <div class="card-icone" style="background-color: #fef3c7; color: #d97706;">
+                            <i class="fa-solid fa-receipt"></i>
+                        </div>
+                        <div class="card-dados">
+                            <span class="card-qtd" style="font-size: 1.3rem;">Imprimir Ledger</span>
+                            <span class="card-label">Evoluções Clínicas Ativas</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-detalhes" style="margin-top: 40px; background: #ffffff; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                    <h3 style="color: #64748b; font-weight: 500;"><i class="fa-solid fa-chart-pie me-2"></i> Painel Estatístico</h3>
+                    <p class="text-muted" style="margin: 10px 0 0 0; font-style: italic; font-size: 0.9rem;">
+                        Os gráficos de pizza e linhas de faturamento mensal serão renderizados dinamicamente neste espaço assim que integrados ao banco de dados.
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+</div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

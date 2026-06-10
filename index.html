@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Clinic - Painel Principal</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="sistema-completo">
+
+    <header class="navbar">
+        <div class="logo"><img src="assets/imagens/LOGO.png" alt="Log Clinic"></div>
+        <div class="usuario">
+            Olá, <span id="nome-usuario-logado">Admin</span> | 
+            <a href="login.html" id="btn-sair" style="color: #94a3b8; text-decoration: none; margin-left: 5px;">
+                <i class="fa-solid fa-power-off"></i> Sair
+            </a>
+        </div> 
+    </header>
+
+    <div class="container-principal">
+        
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active-link"><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="pacientes.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+                    <li><a href="agenda.html"><i class="fa-solid fa-calendar-days"></i> Agenda</a></li>
+                    <li><a href="ledger.html"><i class="fa-solid fa-book-medical"></i> Ledger</a></li>
+                    <li><a href="financeiro.html"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                    <li><a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="conteudo-central">
+            
+            <section id="tela-inicio" class="secao-conteudo">
+                <div class="titulo-secao">
+                    <h2>Painel Principal</h2>
+                    <p>Bem-vindo ao LOG CLINIC. Veja o resumo das atividades de hoje.</p>
+                </div>
+
+                <div class="cards-resumo">
+                    <div class="card-indicador">
+                        <div class="card-icone" style="background-color: #e0f2fe; color: #0369a1;">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div class="card-dados">
+                            <span class="card-qtd" id="dash-qtd-consultas">0</span>
+                            <span class="card-label">Consultas Hoje</span>
+                        </div>
+                    </div>
+
+                    <div class="card-indicador">
+                        <div class="card-icone" style="background-color: #e6fffa; color: #0d9488;">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div class="card-dados">
+                            <span class="card-qtd" id="dash-qtd-pacientes">4</span>
+                            <span class="card-label">Pacientes Totais</span>
+                        </div>
+                    </div>
+
+                    <div class="card-indicador">
+                        <div class="card-icone" style="background-color: #fef3c7; color: #d97706;">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <div class="card-dados">
+                            <span class="card-qtd" id="dash-qtd-servicos">3</span>
+                            <span class="card-label">Serviços Ativos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-detalhes" style="margin-top: 30px;">
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Próximos Compromissos de Hoje</h3>
+                    <div class="container-tabela" style="margin-top: 15px;">
+                        <table class="tabela-sistema">
+                            <thead>
+                                <tr>
+                                    <th style="width: 100px;">Horário</th>
+                                    <th>Paciente</th>
+                                    <th>Procedimento</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela-dash-agenda">
+                                <tr>
+                                    <td colspan="3" style="text-align: center; color: #94a3b8; font-style: italic; padding: 40px 0;">
+                                        Nenhuma consulta agendada para o dia de hoje.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
