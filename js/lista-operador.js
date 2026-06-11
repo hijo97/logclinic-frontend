@@ -32,9 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
                             <td>${operador.setor}</td>
                             <td>${operador.perfil}</td>
                             <td>
-                                <button class="btn-mini-acao btn-mini-editar" title="Editar Serviço" onclick="prepararEdicao(${operador.id})">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
                                 <button class="btn-mini-acao btn-mini-excluir" title="Excluir Usuário" onclick="excluirOperador(${operador.id})">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>

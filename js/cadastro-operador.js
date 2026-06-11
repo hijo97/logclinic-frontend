@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 nome: document.getElementById("usu-nome").value.trim(),
                 cpf: document.getElementById("usu-cpf").value.trim(),
                 setor: document.getElementById("usu-setor").value.trim(),
-                login: document.getElementById("usu-login").value.trim(),
+                login: document.getElementById("usu-login").value.trim().ToLowerCase(),
                 senha: document.getElementById("usu-senha").value.trim(),
                 perfil: document.getElementById("usu-perfil").value.trim(),
             };
